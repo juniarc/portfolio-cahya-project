@@ -1,8 +1,8 @@
 {
-  "name": "restaurant-apps",
+  "name": "portfolio-cahya-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "portfolio cahya juniar",
+  "main": "webpack.common.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
@@ -11,7 +11,7 @@
     "build-image": "node sharp.js"
   },
   "keywords": [],
-  "author": "your_name <your.email@domain.com>",
+  "author": "cahya juniarcahya@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -21,15 +21,12 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
-    "eslint": "^9.5.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "globals": "^15.6.0",
+    "file": "^0.2.2",
     "html-webpack-plugin": "^5.5.3",
     "http-server": "^14.1.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "loader": "^2.1.1",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "sass": "^1.77.2",
