@@ -14,10 +14,18 @@ body {
     font-family: 'Poppins', sans-serif ;
     background-color: #060713;
     color: white;
+
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
 }
 
 h1 {
     font-weight: 600;
+    text-align: center;
 
     font-size: 8rem;
 
@@ -34,6 +42,7 @@ h2 {
 h3 {
     font-family: $roboto-mono-font;
     font-weight: 800;
+    text-align: center;
 
     font-size: 2.25rem;
     letter-spacing: 10px;
@@ -88,6 +97,10 @@ h4 {
     background-color: #224ADA;
 }
 
+.burger-nav {
+    display: none;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -100,21 +113,33 @@ header {
 
     padding: 40px 80px;
 
-    .header-right ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
+    .header-right
+    {
+        .burger-btn {
+            display: none;
+        }
+        .header-nav {
+            .close-btn {
+                display: none;
+            }
 
-        column-gap: 80px;
-        li {
-            .nav-item {
-                text-decoration: none;
-                color: white;
-                font-family: $roboto-mono-font;
-                font-weight: 700;
-
-                letter-spacing: 3px;
-                font-size: 1.25rem;
+            ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+        
+                column-gap: 80px;
+                li {
+                    .nav-item {
+                        text-decoration: none;
+                        color: white;
+                        font-family: $roboto-mono-font;
+                        font-weight: 700;
+        
+                        letter-spacing: 3px;
+                        font-size: 1.25rem;
+                    }
+                }
             }
         }
     }
@@ -406,30 +431,9 @@ footer {
                 font-size: 2rem;
             }
 
-            .email-icon {
+            .email-icon, .linkedin-icon, .github-icon, .instagram-icon {
                 fill: white;
         
-                height: 40px;
-                width: 40px;
-            }
-
-            .linkedin-icon {
-                fill: white;
-
-                height: 40px;
-                width: 40px;
-            }
-
-            .github-icon {
-                fill: white;
-
-                height: 40px;
-                width: 40px;
-            }
-
-            .instagram-icon {
-                fill: white;
-                
                 height: 40px;
                 width: 40px;
             }
@@ -440,3 +444,467 @@ footer {
     
 }
 
+
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 2.4rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    .main-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0;
+    }
+
+    header {
+        padding: 20px 40px;
+
+        .header-right ul {
+            column-gap: 20px;
+
+            li {
+                .nav-item {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .hero-element {
+         height: 700px;
+
+         .hero-text {
+             row-gap: 0px;
+         }
+    }
+
+    main {
+        padding: 0 40px;
+
+        .wrapper {
+            .wrapper-left {
+                width: 25%;
+                padding-right: 40px;
+                padding-bottom: 40px;
+            }
+
+            .wrapper-right {
+                width: 75%;
+                padding-left: 40px;
+                padding-bottom: 40px;
+                row-gap: 40px;
+            }
+        }
+
+        .my-work {
+            .wrapper-left, .wrapper-right {
+                padding-top: 20px;
+            }
+
+            .wrapper-right {
+                .work-wrapper {
+                    .work-wrapper-header {
+                        .work-wrapper-header-left {
+                            .work-title {
+                                font-size: 1.5rem;
+                            }
+                        }
+
+                        .work-wrapper-header-mid {
+                            margin: 0 16px;
+                        }
+
+                        .work-wrapper-header-right {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .work-wrapper-body {
+                        column-gap: 40px;
+                        margin-top: 20px;
+
+                        .work-wrapper-left {
+                            height: 300px;
+                        }
+
+                        .work-wrapper-right {
+                            .skill-wrapper {
+                                gap: 10px;
+                                .skill-item {
+                                    padding: 10px 30px;
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .other-exp {
+            .wrapper-left, .wrapper-right {
+                padding-top: 20px;
+            }
+
+            .other-exp-title-1 {
+                line-height: 2rem;
+            }
+
+            .other-exp-title-2 {
+                font-size: 1.5rem;
+            }
+
+            .wrapper-right {
+                .other-exp-wrapper {
+                    row-gap: 20px;
+                    .other-exp-wrapper-header {
+                        .other-exp-wrapper-header-left {
+                            .other-exp-title {
+                                font-size: 1.5rem;
+                            }
+
+                            .underline-other-exp {
+                                bottom: 0;
+                            }
+
+                            .underline-other-exp.other-exp-2 {
+                                display: none;
+                            }
+                        }
+
+                        .other-exp-wrapper-header-mid {
+                            margin: 0 16px;
+                        }
+
+                        .other-exp-wrapper-header-right {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .other-exp-wrapper-body {
+                        .skill-wrapper {
+                            gap: 10px;
+                            .skill-item {
+                                padding: 10px 30px;
+                                font-size: 1rem;
+                            }
+                        }        
+                    
+                    }
+                }
+            }
+        }    
+    }
+
+    footer {
+        padding: 40px 40px;
+    
+        .footer-header {
+            margin-bottom: 40px;
+        }
+        
+        .footer-body {
+            gap: 20px;
+                
+            .footer-container {  
+                column-gap: 20px;
+    
+                .footer-body-text {
+                    font-size: 1rem;
+                }
+    
+                .email-icon, .linkedin-icon, .github-icon, .instagram-icon {            
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+            
+        }
+    
+        
+    }
+}
+
+@media screen and (max-width: 843px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1rem;
+    }
+
+    h3 {
+        font-size: 0.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .yellow-underline-text {
+        text-decoration: 2px #F2C937 underline; 
+    }
+    
+    .blue-underline-text {
+        text-decoration: 2px #20F2FF underline;
+    }
+    
+    .red-underline-text {
+        text-decoration: 2px #FF204E underline;
+    }
+
+    .main-text {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        letter-spacing: 0;
+    }
+
+    header {
+        position: relative;
+        padding: 20px 20px;
+
+        .header-right {
+            .burger-btn {
+                display: block;
+                background-color: transparent;
+                border: none;
+
+                width: 24px;
+                height: 24px;
+
+                .burger-icon {
+                    fill: white;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .header-nav {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: white;
+                height: fit-content;
+                border-radius: 0 0 0 20px;
+                width: 35%;
+
+                padding: 20px 20px;
+                transform: translateX(100%);
+
+                transition: transform .4s ease-out;
+
+
+                .close-btn {
+                    display: block;
+                    background-color: transparent;
+                    border: none;
+                    width: 24px;
+                    height: 24px;
+
+                    .close-icon {
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        fill: black;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    row-gap: 10px;
+        
+                    li {
+                        .nav-item {
+                            color: black;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .header-nav.open {
+                transform: translateX(0);
+
+            }
+        } 
+    }
+
+    .hero-element {
+        padding: 0 20px;
+        height: 600px;
+         .hero-text {
+             row-gap: 0px;
+         }
+    }
+
+    main {
+        padding: 0 20px;
+
+        .wrapper {
+            .wrapper-left {
+                width: 25%;
+                padding-right: 20px;
+                padding-bottom: 20px;
+            }
+
+            .wrapper-right {
+                width: 75%;
+                padding-left: 20px;
+                padding-bottom: 20px;
+                row-gap: 20px;
+            }
+        }
+
+        .my-work {
+            .wrapper-left, .wrapper-right {
+                padding-top: 20px;
+            }
+
+            .wrapper-right {
+                .work-wrapper {
+                    .work-wrapper-header {
+                        .work-wrapper-header-left {
+                            .work-title {
+                                font-size: 1rem;
+                            }
+
+                            .underline-work {
+                                bottom: 0;
+                            }
+                        }
+
+                        .work-wrapper-header-mid {
+                            margin: 0 8px;
+                        }
+
+                        .work-wrapper-header-right {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                    .work-wrapper-body {
+                        column-gap: 20px;
+                        margin-top: 20px;
+
+                        .work-wrapper-left {
+                            height: 150px;
+                        }
+
+                        .work-wrapper-right {
+                            .skill-wrapper {
+                                gap: 6px;
+                                .skill-item {
+                                    padding: 10px 12px;
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .other-exp {
+            .wrapper-left, .wrapper-right {
+                padding-top: 20px;
+            }
+
+            .other-exp-title-1 {
+                line-height: 1rem;
+            }
+
+            .other-exp-title-2 {
+                font-size: 0.625rem;
+            }
+
+            .wrapper-right {
+                .other-exp-wrapper {
+                    row-gap: 20px;
+                    .other-exp-wrapper-header {
+                        .other-exp-wrapper-header-left {
+                            .other-exp-title {
+                                font-size: 1rem;
+                            }
+
+                            .underline-other-exp {
+                                height: 20%;
+                                bottom: 30%;
+                            }
+
+                            .underline-other-exp.other-exp-2 {
+                                height: 20%;
+                                display: block;
+                                bottom: 30%;
+                            }
+                        }
+
+                        .other-exp-wrapper-header-mid {
+                            margin: 0 8px;
+                        }
+
+                        .other-exp-wrapper-header-right {
+                            font-size: 0.75rem;
+                        }
+                    }
+
+                    .other-exp-wrapper-body {
+                        .skill-wrapper {
+                            gap: 6px;
+                            .skill-item {
+                                padding: 10px 12px;
+                                font-size: 0.75rem;
+                            }
+                        }        
+                    
+                    }
+                }
+            }
+        }    
+    }
+
+    footer {
+        padding: 20px 20px;
+    
+        .footer-header {
+            margin-bottom: 20px;
+        }
+        
+        .footer-body {
+            gap: 12px;
+                
+            .footer-container {  
+                column-gap: 6px;
+    
+                .footer-body-text {
+                    font-size: 0.75rem;
+                }
+    
+                .email-icon, .linkedin-icon, .github-icon, .instagram-icon {            
+                    height: 12px;
+                    width: 12px;
+                }
+            }
+            
+        }
+    
+        
+    }
+}
